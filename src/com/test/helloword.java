@@ -1,6 +1,7 @@
 package com.test;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -94,10 +95,24 @@ public class helloword {
 		model.addObject("login_model", test);
 		return model;
 		
-		
-		
 	}
 	
+	@RequestMapping(value="/login_test.html",method=RequestMethod.GET)
+	public ModelAndView model_test()
+	{
+		
+		ModelAndView model=new ModelAndView("login_test");
+		return model;
+		
+	}
+	@RequestMapping(value="/submit_test.html", method=RequestMethod.POST)
+	public ModelAndView submit_test(@ModelAttribute("login_a")login login_p) 
+	{
+		
+		ModelAndView model=new ModelAndView("submit_test");
+		return model;
+		
+	}
 	
 
 }
