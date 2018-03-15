@@ -21,7 +21,6 @@ public class helloword {
 		model.addObject("msg", "welcome to the srping testing");
 		return model;
 		
-		
 	}
 	
 	
@@ -72,8 +71,33 @@ public class helloword {
 		model.addObject("user_login_details", "Username : \n"+ username_r + "Password : " +password_r );
 		return model;
 		
+	}
+	
+	
+	@RequestMapping(value="/login_2.html",method=RequestMethod.GET)
+	public ModelAndView login_model()
+	{
+		ModelAndView model=new ModelAndView("login_model_login");
+		return model;
 		
 	}
+	
+	@RequestMapping(value="/home1.html",method=RequestMethod.POST)
+	public ModelAndView submit_login_model(@RequestParam("user")String username_r,@RequestParam("pass")String password_r)
+	{
+		login test=new login();
+		test.setUser(username_r);
+		test.setPass(password_r);
+		
+		
+		ModelAndView model=new ModelAndView("login_model_submit");
+		model.addObject("login_model", test);
+		return model;
+		
+		
+		
+	}
+	
 	
 
 }

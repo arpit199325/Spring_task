@@ -9,10 +9,10 @@
 <body>
 
 
-<form action="/VendorManagementSystem/home_1.html", method="post">
+<form action="/SpringPractice/home_1.html", method="post">
 <div>
 <p>Username : <input type="text" name="user"></p></n>
-<p>Password : <input type="text" name="pass"></p></n>
+<p>Password : <input type="password" name="pass"></p></n>
 
 <input type="submit" value="LogIn">
 </div>

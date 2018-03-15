@@ -4,16 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Log In</title>
+<title> Login with Model </title>
 </head>
 <body>
 
-<form action="/SpringPractice/home.html" method="post">
 
+<form action="/SpringPractice/home1.html", method="post">
 <div>
-<p>User name: <input type="text" name="username"> </p>
-<p>password : <input type="password" name="password"></p>
-<p><input type="submit" value="login"></p>
+<p>Username : <input type="text" name="user"></p></n>
+<p>Password : <input type="password" name="pass"></p></n>
+<input type="submit" value="LogIn">
 </div>
 
 </form>
